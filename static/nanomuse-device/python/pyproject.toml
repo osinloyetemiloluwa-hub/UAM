@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nanomuse-device"
+version = "0.1.0"
+description = "MCP client for the NanoMuse on-device Android host (Termux/PRoot)"
+requires-python = ">=3.10"
+dependencies = ["mcp>=1.8.0"]
+
+[project.scripts]
+nanomuse-device = "device_client:main"
+
+[tool.setuptools]
+py-modules = ["device_client"]
